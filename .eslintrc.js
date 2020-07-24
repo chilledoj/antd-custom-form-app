@@ -18,6 +18,10 @@ module.exports = {
   },
   settings: {
     'import/resolver': {
+      parcel: {
+        rootDir: 'src',
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+      },
       node: {
         paths: ['src'],
         extensions: ['.js', '.jsx', '.ts', '.tsx'],
@@ -26,6 +30,7 @@ module.exports = {
   },
   env: {
     browser: true,
+    es6: true,
     node: true,
     jest: true,
   },
