@@ -1,5 +1,6 @@
 import React, { FC } from 'react';
 import { Form, Input, Button } from 'antd';
+import MyInput from './MyInput';
 
 interface OnSubmitFunc {
   (values: unknown): void;
@@ -19,6 +20,10 @@ const TestForm: FC<TestFormProps> = ({ onSubmit }: TestFormProps) => {
     <Form form={form} layout="vertical" onFinish={onFinish}>
       <Form.Item name="username" label="Username">
         <Input />
+      </Form.Item>
+      <Form.Item name="num" label="Number">
+        {/* @ts-ignore */}
+        <MyInput />
       </Form.Item>
       <Form.Item>
         <Button type="primary" htmlType="submit">
